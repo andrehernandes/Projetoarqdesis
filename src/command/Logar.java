@@ -29,20 +29,24 @@ public class Logar implements Command {
 						Sindico sindico = new Sindico( login.getSenha(),  login.getTipo(), login.getId(),  0,  "",  "");
 						sindico.carregar();
 						session.setAttribute("sindico", sindico);
+						view = request.getRequestDispatcher("infoSindico.jsp");
+						view.forward(request,response);
 						break;
 					case "Atendente":
 						Atendente a = new Atendente( login.getSenha(),  login.getTipo(), login.getId(),  0,  "",  "");
 						a.carregar();
 						session.setAttribute("atendente", a);
+						view = request.getRequestDispatcher("infoAtendente.jsp");
+						view.forward(request,response);
 						break;
 					case "Funcionario":
 						Funcionario f = new Funcionario(login.getSenha(),  login.getTipo(), login.getId(),"","","","", "", 0);
 						f.carregar();
 						session.setAttribute("funcionario", f);
+						view = request.getRequestDispatcher("infoFuncionario.jsp");
+						view.forward(request,response);
 						break;
 				}
-				view = request.getRequestDispatcher("info.jsp");
-				view.forward(request,response);
 			}
 			else{
 				view = request.getRequestDispatcher("loginPage.jsp");

@@ -19,16 +19,17 @@
 
 	<!-- Barra superior com os menus de navegação -->
 	<!-- Container Principal -->
+	
 	<div id="main" class="container">
-		<% System.out.printf("Síndico: "+session.getAttribute("sindico")+" Atendente: "+session.getAttribute("atendente")+" Funcionário: "+session.getAttribute("funcionario")); %>
-		<h3 class="page-header">Informações da Pessoa #${sindico.id}</h3>
+		<h3 class="page-header">Informações da Pessoa #${atendente.id}</h3>
 		<p>
-			Nome: ${sindico.nome}<br>
-			Tipo: ${sindico.tipo}<br>
-			Cpf:  ${sindico.cpf}<br>
+			Nome: ${atendente.nome}<br>
+			Tipo: ${atendente.tipo}<br>
+			Cpf:  ${atendente.cpf}<br>
 		</p>
 	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
