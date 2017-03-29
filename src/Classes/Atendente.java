@@ -46,7 +46,7 @@ public class Atendente extends Login {
 	}
 
 
-	public Funcionario cadastrarFuncionario(FuncionarioTO to)
+	public Funcionario cadastrarFuncionario(FuncionarioTO to) throws Exception
 	{
 		if(to.getTipo().equals("Funcionario"))
 		{
@@ -54,6 +54,7 @@ public class Atendente extends Login {
 			dao.cadastrarFuncionario(to);
 			Funcionario f = new Funcionario(to.getSenha(),  to.getTipo(), to.getId(), to.getNome(), to.getCpf(), to.getData(), to.getHorarioEntrada(), to.getHorarioSaida(), to.getIdFuncionario());
 			getTOFuncionario(to, f);
+			salvarFuncionarioTxt(f);
 			return f;
 		}
 		return null;

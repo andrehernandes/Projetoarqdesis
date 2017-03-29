@@ -23,7 +23,7 @@ public class Controller extends HttpServlet {
 				comando.executa(request, response);
 			} catch ( NullPointerException|InstantiationException | IllegalAccessException | ClassNotFoundException e) {
 				RequestDispatcher view = null;
-				view = request.getRequestDispatcher("login.jsp");
+				view = request.getRequestDispatcher("loginPage.jsp");
 				view.forward(request, response);
 			}
 			

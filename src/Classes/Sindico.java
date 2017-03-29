@@ -2,6 +2,7 @@ package Classes;
 
 import DAO.SindicoDAO;
 import TO.AtendenteTO;
+import TO.FuncionarioTO;
 
 public class Sindico extends Atendente {
 

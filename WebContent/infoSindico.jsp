@@ -27,6 +27,14 @@
 			Tipo: ${sindico.tipo}<br>
 			Cpf:  ${sindico.cpf}<br>
 		</p>
+		<div class="login-page">
+		<b>Ações disponíveis</b>
+		<form>
+		<button type="submit" class="btn btn-primary" name="command"
+						value="TelaCadastrarFuncionario"
+						method="post">Cadastrar Funcionario</button>
+		</form>
+		</div>
 	</div>
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
